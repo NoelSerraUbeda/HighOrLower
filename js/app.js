@@ -36,24 +36,23 @@ function guess(guess) {
     displaySecondNumber();
     if (guess === 'lower') {
         if (secondNumber < firstNumber) {
-            document.getElementById('result').textContent = 'Correcto! El número era más bajo.';
+            document.getElementById('result').textContent = '¡Correcto! El número era más bajo.';
             correctGuesses++;
         } else {
-            document.getElementById('result').textContent = 'Incorrecto! El número era más alto.';
+            document.getElementById('result').textContent = '¡Incorrecto! El número era más alto.';
             correctGuesses = 0; // Reiniciar contador
         }
     } else if (guess === 'higher') {
         if (secondNumber > firstNumber) {
-            document.getElementById('result').textContent = 'Correcto! El número era más alto.';
+            document.getElementById('result').textContent = '¡Correcto! El número era más alto.';
             correctGuesses++;
         } else {
-            document.getElementById('result').textContent = 'Incorrecto! El número era más bajo.';
+            document.getElementById('result').textContent = '¡Incorrecto! El número era más bajo.';
             correctGuesses = 0; // Reiniciar contador
         }
     }
 
     setTimeout(function() {
-        // Habilitar los botones después de 2 segundos
         buttons.forEach(function(button) {
             button.disabled = false;
         });
